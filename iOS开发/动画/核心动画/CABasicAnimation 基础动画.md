@@ -1,5 +1,9 @@
 # CABasicAnimation 基础动画
+在iOS中有以下几种不同的keyPath，代表着不同的效果：
 
+![](270936547379029.png)
+
+例子：
 ```swift
 // 创建基础动画
 let animation = CABasicAnimation()
