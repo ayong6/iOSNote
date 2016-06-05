@@ -14,10 +14,13 @@
 **一、关于CALayer的疑惑**
 
 - 首先
+  
   CALayer是定义在QuartzCore框架中
+  
   CGImageRef、CGColorRef两种数据类型是定义在CoreGraphics框架中的，UIColor、UIImage定义在UIKit框架中的
 
 - 其次
+  
   QuartzCore框架和CoreGraphics框架可以跨平台使用，在iOS和Mac OS X上都能使用，但是UIKit只能在iOS中使用
 
 - 为了保证可移植性，QuartzCore不能使用UIImage和UIColor，只能使用CGImageRef和CGColorRef

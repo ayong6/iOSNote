@@ -9,6 +9,7 @@ Core Animation的动画执行过程都是在后台操作的，不会阻塞主线
 > Core Animation是直接作用在CALayer上的，并非UIView
 
 **核心动画继承结构**
+
 ![](attach-0.png)
 
 
@@ -21,13 +22,21 @@ Core Animation的动画执行过程都是在后台操作的，不会阻塞主线
 CAAnimation是所有动画对象的父类，负责控制动画的持续时间和速度，是个抽象类，不能直接使用，应该使用它具体的子类
 
 CAAnimation可分为四种：
-1. CABasicAnimation
+
+1. CABasicAnimation   
+      
    通过设定起始点，终点，时间，动画会沿着你这设定点进行移动。可以看做特殊的CAKeyFrameAnimation
-2. CAKeyframeAnimation
+
+1. CAKeyframeAnimation
+      
    Keyframe顾名思义就是关键点的frame，你可以通过设定CALayer的始点、中间关键点、终点的frame，时间，动画会沿你设定的轨迹进行移动
-3. CAAnimationGroup
+
+1. CAAnimationGroup
+      
    Group也就是组合的意思，就是把对这个Layer的所有动画都组合起来。PS：一个layer设定了很多动画，他们都会同时执行，如何按顺序执行我到时候再讲。
-4. CATransition
+   
+1. CATransition
+      
    这个就是苹果帮开发者封装好的一些动画
 ## 属性 ---
 ### 动画的开始时间
