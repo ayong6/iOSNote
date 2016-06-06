@@ -1,5 +1,6 @@
 # UINavigationController 导航控制器
 导航控制器是用来管理视图控制器，进行场景导航。
+
 ![](attach-0.png)
 
 导航控制器有两个重要的属性：navigationBar和navigationItem
@@ -82,6 +83,7 @@ public func popViewControllerAnimated(animated: Bool) -> UIViewController?
 ```swift
 public func popToViewController(viewController: UIViewController, animated: Bool) -> [UIViewController]?
 ```
+
 > **注意**：
 > 参数只能是栈中的控制器
 		

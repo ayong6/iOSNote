@@ -9,7 +9,6 @@
 
 ![](attach-0.png)
 
-
 **UITabBarController的简单实用**
 
 - 初始化UITabBarController

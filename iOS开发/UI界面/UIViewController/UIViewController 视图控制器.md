@@ -29,6 +29,7 @@ let storyboard = UIStoryboard(name: "main", bundle: nil)
 - bundle参数：nil默认就是`UIBundle.mainBundle()`
 
 2.1 通过箭头所指向的storyboard创建视图控制器
+
 ```swift
 let vc1 = storyboard.instantiateInitialViewController()
 self.window?.rootViewController = vc1
@@ -76,7 +77,7 @@ iOS6之后使用`didRecevelMemoryWarning`内存紧张的时候调用
 - 一个iOS的app很少只有一个控制器组成，除非这个app极其简单
 - 当app中有多个控制器的时候，我们就需要对这些控制器进行管理
 - 有多个view时，可以用一个大的view去管理1个或者多个小view，控制器也是如此，用1个控制器去管理其他多个控制器
-          	
+                    	
   比如，用一个控制器A去管理3个控制器B、C、D，控制器A被称为控制器B、C、D的“父控制器”；控制器B、C、D被称为控制器A的“子控制器”
 
 > NOTE：
@@ -234,8 +235,10 @@ public func performSegueWithIdentifier(identifier: String, sender: AnyObject?)
 1. 根据identifier去storyboard中找到对应的线，新建UIStoryboardSegue对象
    - 设置segue对象的sourceViewController（来源控制器）
    - 创建segue对象的destinationViewController（目标控制器）
-2. 调用sourceViewController的下面方法，做一些跳转前的准备操作`public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`
-3. 调用Segue对象的`func perform()`方法开始执行界面跳转操作
+
+1. 调用sourceViewController的下面方法，做一些跳转前的准备操作`public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`
+
+1. 调用Segue对象的`func perform()`方法开始执行界面跳转操作
    - 如果segue的style是push，取得sourceViewController所在的UINavigationController，调用UINavigationController的push方法将destinationViewController压入栈中，完成跳转。
    - 如果segue的style是modal，调用sourceViewController的presentViewController方法将destinationViewController展示出来
 
